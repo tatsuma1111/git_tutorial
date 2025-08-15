@@ -1,0 +1,35 @@
+name: バグ報告
+description: 不具合の詳細を報告してください
+title: "[BUG] " # 新規Issue作成時に自動で先頭につくタイトル
+labels: [bug]   # 自動で付与するラベル
+assignees: []   # 自動で割り当てるユーザー（任意）
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 概要
+      description: バグの簡単な説明を記入してください
+      placeholder: 例）ログインできない
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを再現する手順を記入してください
+      placeholder: |
+        1. ○○を開く
+        2. ××をクリック
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 使用ブラウザ
+      options:
+        - Chrome
+        - Firefox
+        - Safari
