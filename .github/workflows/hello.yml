@@ -4,7 +4,7 @@ name: Hello Actions
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   say-hello:
