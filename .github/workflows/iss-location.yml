@@ -1,0 +1,13 @@
+name: ISS Location Tracker
+
+on:
+  workflow_dispatch:  # 手動実行トリガー
+
+jobs:
+  track-iss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get ISS location from open API
+        run: |
+          echo "Fetching ISS current location..."
+          curl https://api.wheretheiss.at/v1/satellites/25544
