@@ -1,0 +1,17 @@
+name: Hello Actions
+
+# push イベントで main ブランチに反応
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+
+      - name: メッセージ表示
+        run: echo "Hello GitHub Actions!"
